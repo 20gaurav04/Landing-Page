@@ -1,40 +1,76 @@
-import React,{ useState } from 'react'
-import './Navbar.css'
-import { Link } from 'react-scroll'
-import logo from '../assets/logo.png'
-import Contact from '../assets/contact.png'
-// import Menu from '../assets/menu.png'
+import React, { useState } from 'react';
+import { Link } from 'react-scroll';
+import logo from '../assets/logo.png';
+import Contact from '../assets/contact.png';
+import Menu from '../assets/menu.png';
 
 function Navbar() {
-  const [showMenu, setshowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
-    <nav className="navbar"> 
-    <div className="logo">
-    <img src={logo} alt="logo" className="logo"></img>
-    </div>
+    <nav className="w-full bg-white shadow-lg h-20 sticky top-0 z-20 flex items-center justify-between  px-4 md:px-8 lg:px-12 font-burbank text-2xl">
+      {/* Logo */}
+      <div className="flex items-center">
+        <img src={logo} alt="logo" className=" mt-4 w-32 h-32" />
+      </div>
 
-    <div className="nav-links">
-        <Link activeClass="active" to='home' spy ={true} smooth = {true} offset={-50} duration={500} className="nav-links-item">Home</Link> 
-        <Link activeClass="active" to='abouts' spy ={true} smooth = {true} offset={-100} duration={500} className="nav-links-item">Streetwear</Link>
-        <Link activeClass="active" to='contact' spy ={true} smooth = {true} offset={-50} duration={500} className="nav-links-item">Summer</Link>
-        <Link activeClass="active" to='Project' spy ={true} smooth = {true} offset={-50} duration={500} className="nav-links-item">Oversized</Link>
-        <Link activeClass="active" to='contact' spy ={true} smooth = {true} offset={-50} duration={500} className="nav-links-item">Casuals</Link>
-        <button class = "btn" onClick={()=> {document.getElementById('reach').scrollIntoView({behavior:'smooth'})}}><img  className="btnImg" src={Contact} alt='Contact Me'/>Login/Sign-up</button>
+      {/* NavLinks for larger screens */}
+      <div className="hidden md:flex items-center space-x-6">
+        <Link to="home" spy={true} smooth={true} offset={-50} duration={500} className="cursor-pointer hover:text-red-600 active:text-red-700">
+          Home
+        </Link>
+        <Link to="categories" spy={true} smooth={true} offset={-100} duration={500} className="cursor-pointer  hover:text-red-600 active:text-red-700">
+          Categories
+        </Link>
+        <Link to="products" spy={true} smooth={true} offset={-50} duration={500} className="cursor-pointer  hover:text-red-600 active:text-red-700">
+          Exclusives
+        </Link>
+        <Link to="about" spy={true} smooth={true} offset={-50} duration={500} className="cursor-pointer  hover:text-red-600 active:text-red-700">
+          About Us
+        </Link>
+        <Link to="reviews" spy={true} smooth={true} offset={-50} duration={500} className="cursor-pointer  hover:text-red-600 active:text-red-700">
+          Reviews
+        </Link>
+      </div>
 
-    </div>
+      {/* Signup Button */}
+      <button className="hidden md:flex items-center gap-2 text-lg font-serif hover:text-orange-700">
+        <img src={Contact} className="w-8 h-8" alt="Contact Icon" />
+        SIGN-IN
+      </button>
 
-    <img src ="#" alt = "menu" className= "mobMenu" onClick={()=> setshowMenu(!showMenu)} />
-    
-    <div className="navMenu" style={{display:showMenu ? 'flex':'none'}}>
+      {/* Hamburger Menu Icon for mobile */}
+      <div className="md:hidden">
+        <img
+          src={Menu}
+          alt="menu"
+          className="w-8 h-8 cursor-pointer"
+          onClick={() => setShowMenu(!showMenu)}
+        />
+      </div>
 
-        <Link activeClass="active" to='nav' spy ={true} smooth = {true} offset={-100} duration={500} className="Menu-item" onClick={() => setshowMenu(false)}>Home</Link> 
-        <Link activeClass="active" to='about' spy ={true} smooth = {true} offset={-50} duration={500} className="Menu-item" onClick={() => setshowMenu(false)}>About</Link>
-        <Link activeClass="active" to='Project' spy ={true} smooth = {true} offset={-50} duration={500} className="Menu-item" onClick={() => setshowMenu(false)}>Project</Link>
-        <Link activeClass="active" to='socials' spy ={true} smooth = {true} offset={-50} duration={500} className="Menu-item" onClick={() => setshowMenu(false)}>Socials</Link>
-        <Link activeClass="active" to='reach' spy ={true} smooth = {true} offset={-50} duration={500} className="Menu-item" onClick={() => setshowMenu(false)}>Contact Me</Link>
-    </div>
-    
-    </nav>  
-  )
+      {/* Mobile Menu */}
+      {showMenu && (
+        <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4 md:hidden">
+          <Link to="home" spy={true} smooth={true} offset={-50} duration={500} className="cursor-pointer  hover:text-red-600 active:text-red-700" onClick={() => setShowMenu(false)}>
+            Home
+          </Link>
+          <Link to="categories" spy={true} smooth={true} offset={-100} duration={500} className="cursor-pointer hover:text-red-600 active:text-red-700" onClick={() => setShowMenu(false)}>
+            Categories
+          </Link>
+          <Link to="products" spy={true} smooth={true} offset={-50} duration={500} className="cursor-pointer hover:text-red-600 active:text-red-700" onClick={() => setShowMenu(false)}>
+            Exclusives
+          </Link>
+          <Link to="about" spy={true} smooth={true} offset={-50} duration={500} className="cursor-pointer hover:text-red-600 active:text-red-700" onClick={() => setShowMenu(false)}>
+            About Us
+          </Link>
+          <Link to="reviews" spy={true} smooth={true} offset={-50} duration={500} className="cursor-pointer hover:text-red-600 active:text-red-700" onClick={() => setShowMenu(false)}>
+            Reviews
+          </Link>
+        </div>
+      )}
+    </nav>
+  );
 }
-export default Navbar
+
+export default Navbar;
