@@ -3,7 +3,7 @@ import { Carousel, Blockquote, Rating, RatingStar } from 'flowbite-react';
 
 function Reviews() {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    <div className="container mx-auto px-4 sm:px-6 sm:mt-2 lg:px-8 mt-10">
       {/* Promotion Section */}
       <div className="flex flex-col lg:flex-row items-center justify-between bg-slate-600 bg-hero-pattern bg-blend-color-burn text-center lg:text-left p-6 mb-10 rounded-md shadow-md">
         <h1 className="text-white text-3xl sm:text-4xl lg:text-6xl font-serif">
@@ -32,7 +32,7 @@ function Reviews() {
             </div>
             <Blockquote>
               <p className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white text-justify font-serif">
-                "UrbanZ exceeded my expectations! The clothes are stylish, comfortable, and true to size. I loved the quick delivery and the careful packaging. This has become my go-to store for fashion. Highly recommended!."
+                "UrbanZ exceeded my expectations!  This has become my go-to store for fashion. Highly recommended!."
               </p>
             </Blockquote>
             <figcaption className="mt-6 flex items-center justify-center space-x-3">
@@ -54,7 +54,7 @@ function Reviews() {
             </div>
             <Blockquote>
               <p className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white text-justify font-serif">
-                "Amazing Handeled! I have to say. The cloth material, the softness, the comfort level , all done extremely well.Would surely recommend to others."
+                "Amazing Handeled! I have to say. All done extremely well.Would surely recommend to others."
               </p>
             </Blockquote>
             <figcaption className="mt-6 flex items-center justify-center space-x-3">
@@ -78,7 +78,7 @@ function Reviews() {
             </div>
             <Blockquote>
               <p className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white text-justify font-serif">
-                "I had a fantastic shopping experience with UrbanZ! The clothes are well-made, and the styles are exactly what I was looking for. Delivery was prompt, and the sizing was just right. I’ll definitely be back for more!."
+                "The clothes are well-made. Delivery was prompt, and the sizing was just right. I’ll definitely be back for more!."
               </p>
             </Blockquote>
             <figcaption className="mt-6 flex items-center justify-center space-x-3">
