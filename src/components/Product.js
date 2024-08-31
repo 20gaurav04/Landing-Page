@@ -11,7 +11,7 @@ function Product() {
   return (
     <div className="px-4 sm:px-8 lg:px-16 xl:px-20 mt-20" id='products'>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
-        <Card className="w-full max-w-xs sm:max-w-sm font-serif hover:-translate-y-5 hover:border-b-4 hover:border-red-500 transition-all duration-300 hover:shadow-2xl hover:list-image-none" imgAlt="Demon Slayer Tshirt" imgSrc={card1}>
+        <Card className="w-full max-w-xs sm:max-w-sm font-serif hover:-translate-y-5 hover:border-b-4 hover:border-red-500 transition-all duration-300 hover:shadow-2xl " imgAlt="Demon Slayer Tshirt" imgSrc={card1}>
           <a href="#">
             <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white font-serif">
               Demon Slayer Oversized

@@ -31,7 +31,7 @@ function Foots() {
               <div>
                 <FooterTitle title="Follow us" />
                 <FooterLinkGroup col>
-                  <FooterLink href="#">Github</FooterLink>
+                  <FooterLink href="https://github.com/20gaurav04">Github</FooterLink>
                   <FooterLink href="#">Discord</FooterLink>
                 </FooterLinkGroup>
               </div>
